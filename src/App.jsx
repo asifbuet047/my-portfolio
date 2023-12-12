@@ -12,15 +12,16 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import { Carousel } from 'flowbite-react'
+import { Carousel, Footer } from 'flowbite-react'
 import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
 
 function App() {
   const current = new Date();
   return (
     <div className='md:ml-20 md:mr-20'>
       <NavigationBar />
-      <div className='flex flex-row gap-5'>
+      <div className='flex flex-col md:flex-row gap-5 mt-5'>
         <div className='w-fit border-4 border-[#2a2c39] rounded-lg pl-2 pr-2'>
           <Avatar
             alt='Me'
@@ -35,36 +36,42 @@ function App() {
           <Divider light />
           <Typography
             noWrap
-            sx={{ fontSize: '14px' }}
-          >asifbuet047 · he/him</Typography>
+            sx={{ fontSize: '16px' }}
+          >asifbuet047</Typography>
           <Typography
             paragraph
 
-            sx={{ fontSize: '10px' }}
+            sx={{ fontSize: '15px' }}
           >{`Love to code and share my thoughts 
           among people to enrich life by new sustainable
            technology for betterment of my society
             and for my people.`}</Typography>
 
-          <div className='flex flex-row justify-start items-center w-full'>
+          <div className='flex flex-row justify-start items-center w-full mt-2 mb-2'>
             <HomeWorkIcon />
             <Typography
               sx={{ fontSize: '14px', paddingLeft: '5px' }}
             >Bangladesh Power Development Board(BPDB)</Typography>
           </div>
-          <div className='flex flex-row justify-start items-center w-full'>
+          <div className='flex flex-row justify-start items-center w-full mt-2 mb-2'>
+            <SchoolIcon />
+            <Typography
+              sx={{ fontSize: '14px', paddingLeft: '5px' }}
+            >Bangladesh University of Engineering & Technology (BUET)</Typography>
+          </div>
+          <div className='flex flex-row justify-start items-center w-full mt-2 mb-2'>
             <LocationOnIcon />
             <Typography
               sx={{ fontSize: '14px', paddingLeft: '5px' }}
             >Dhaka, Bangladesh</Typography>
           </div>
-          <div className='flex flex-row justify-start items-center w-full'>
+          <div className='flex flex-row justify-start items-center w-full mt-2 mb-2'>
             <WatchLaterIcon />
             <Typography
               sx={{ fontSize: '14px', paddingLeft: '5px' }}
-            >{current.getUTCHours() + ":" + current.getUTCSeconds()}</Typography>
+            >{current.getHours() + ":" + current.getUTCSeconds()}</Typography>
           </div>
-          <div className='flex flex-row justify-start items-center w-full'>
+          <div className='flex flex-row justify-start items-center w-full mt-2 mb-2'>
             <EmailIcon />
             <Typography
               sx={{ fontSize: '14px', paddingLeft: '5px' }}
@@ -80,155 +87,187 @@ function App() {
 
         </div>
         <div className='w-full border-4 border-[#2a2c39] rounded-lg pl-2 pr-2'>
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >Hi there! 👋</Typography>
-          <Typography
-            sx={{ fontSize: '14px', paddingLeft: '5px' }}
-          >I'm MD ASIFUZZAMAN ASIF, a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer. With a strong foundation in full-stack web development, I thrive on turning innovative ideas into high-quality, scalable applications and user friendly applications.</Typography>
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >Hi there! 👋</Typography>
+            <Typography
+              sx={{ fontSize: '14px', paddingLeft: '5px' }}
+            >I'm MD ASIFUZZAMAN ASIF, a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer. With a strong foundation in full-stack web development, I thrive on turning innovative ideas into high-quality, scalable applications and user friendly applications.</Typography>
+          </Box>
+
           <Typography
             sx={{ fontSize: '24px', paddingLeft: '5px' }}
           >🚀 Skills</Typography>
-          <Box>
+          <Box className='mt-2 mb-2'>
             <ul>
-              <li><span className='font-bold'>Frontend:</span><span>React.js, MUO, HTML, CSS, JavaScript (ES6+)</span></li>
-              <li><span className='font-bold'>Backend:</span><span>Node.js, Express.js, MongoDB, Mongoose</span></li>
-              <li><span className='font-bold'>APIs:</span><span>RESTful APIs, GraphQL</span></li>
-              <li><span className='font-bold'>Tools & Platforms:</span><span>Git, npm, Yarn, Babel</span></li>
-              <li><span className='font-bold'>Deployment:</span><span>Vercel, Netlify</span></li>
+              <li><span className='font-bold'>Frontend: </span><span>React.js, MUO, HTML, CSS, JavaScript (ES6+)</span></li>
+              <li><span className='font-bold'>Backend: </span><span>Node.js, Express.js, MongoDB, Mongoose</span></li>
+              <li><span className='font-bold'>APIs: </span><span>RESTful APIs, GraphQL</span></li>
+              <li><span className='font-bold'>Tools & Platforms: </span><span>Git, npm, Yarn, Babel</span></li>
+              <li><span className='font-bold'>Deployment: </span><span>Vercel, Netlify</span></li>
             </ul>
           </Box>
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >🌱 Always Learning</Typography>
-          <Box>
-            I'm a firm believer in continuous learning and staying up-to-date with the latest technologies. Whether it's exploring new frontend frameworks or diving into emerging backend technologies, I am committed to enhancing my skills and adapting to industry trends.
+
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >🌱 Always Learning</Typography>
+            <Box>
+              I'm a firm believer in continuous learning and staying up-to-date with the latest technologies. Whether it's exploring new frontend frameworks or diving into emerging backend technologies, I am committed to enhancing my skills and adapting to industry trends.
+            </Box>
           </Box>
 
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >📫 Let's Connect</Typography>
-          <Box>
-            {"I'm always open to collaboration, interesting projects, and connecting with fellow developers. Feel free to reach out to me via "}
-            <Link href='https://www.linkedin.com/in/md-asifuzzaman-a4682188/'>Linkdin</Link>
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >📫 Let's Connect</Typography>
+            <Box>
+              {"I'm always open to collaboration, interesting projects, and connecting with fellow developers. Feel free to reach out to me via "}
+              <Link href='https://www.linkedin.com/in/md-asifuzzaman-a4682188/'>Linkdin</Link>
+            </Box>
           </Box>
 
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >🌐 Portfolio</Typography>
-          <Box>
-            <span>Check out some of my work on </span>
-            <Link href='https://github.com/asifbuet047'>GitHub</Link>
-            <span> where you'll find a collection of projects showcasing my coding style and problem-solving approach.</span>
-          </Box>
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >My GitHub stats</Typography>
-          <Box>
-            <img src="https://github-readme-stats.vercel.app/api?username=asifbuet047&theme=radical&show_icons=true&hide_border=false&count_private=true" alt="Git streak" />
-          </Box>
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >My contribution and my public repos stats</Typography>
-          <Box>
-            <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=asifbuet047&theme=cobalt" alt="Git streak" />
-          </Box>
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >My programming language stats</Typography>
-          <Box>
-            <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=asifbuet047&theme=cobalt" alt="Git streak" />
-          </Box>
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >Technologies I know best</Typography>
-          <Box>
-            <img src="https://skillicons.dev/icons?i=c,css,html,firebase,git,github,js,nodejs,postman,tailwind,vite,react&perline=3" alt="Git streak" />
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >🌐 Portfolio</Typography>
+            <Box>
+              <span>Check out some of my work on </span>
+              <Link href='https://github.com/asifbuet047'>GitHub</Link>
+              <span> where you'll find a collection of projects showcasing my coding style and problem-solving approach.</span>
+            </Box>
           </Box>
 
-          <Typography
-            sx={{ fontSize: '24px', paddingLeft: '5px' }}
-          >My top projects details</Typography>
-          <Divider />
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >My GitHub stats</Typography>
+            <Box>
+              <img src="https://github-readme-stats.vercel.app/api?username=asifbuet047&theme=radical&show_icons=true&hide_border=false&count_private=true" alt="Git streak" />
+            </Box>
+          </Box>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-            <Card sx={{ backgroundColor: '#2a2c39', color: 'white' }}>
-              <CardContent>
-                <Typography sx={{ fontSize: 24 }} gutterBottom>
-                  Skill Share
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <li>Anyone can teach anybody from anywhere</li>
-                  <li>One can sign in anytime and become a student</li>
-                  <li>One can register with Google</li>
-                  <li>Admin can see all useres activities</li>
-                  <li>Admin can make anyone admin</li>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://assignment-12-skill-share.web.app/'}>Live site</Link>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://github.com/asifbuet047/skill-share-client'}>Client Code link</Link>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://github.com/asifbuet047/skill-share-server'}>Server Code link</Link>
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card sx={{ backgroundColor: '#2a2c39', color: 'white' }}>
-              <CardContent>
-                <Typography sx={{ fontSize: 24 }} gutterBottom>
-                  Food Sharing
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <li>Anyone in a communitu canshare his/her leftover meal</li>
-                  <li>One can sign in anytime and become a doner</li>
-                  <li>One can register with Google</li>
-                  <li>Admin can see all donation by all donars</li>
-                  <li>Any valid user can access food</li>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://assignment-11-community-foods.web.app/'}>Live site</Link>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://github.com/asifbuet047/food-sharing-client'}>Client Code link</Link>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://github.com/asifbuet047/food-sharing-server'}>Server Code link</Link>
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card sx={{ backgroundColor: '#2a2c39', color: 'white' }}>
-              <CardContent>
-                <Typography sx={{ fontSize: 24 }} gutterBottom>
-                  Brand Online Shop
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <li>Our project is Tech Brand Online Shop</li>
-                  <li>This is e-commerce store where a user can buy tech products like smartphone,smartwatch,headphone etc</li>
-                  <li>User can login via mail and password also new user can create acccount</li>
-                  <li>If user already signed in Google at his browser he can login via Google</li>
-                  <li>All products ar sorted here as their brand name</li>
-                  <li>All home page user can see our current offer, our brands, our most sold product</li>
-                  <li>User can add product in cart</li>
-                  <li>All cart product can be shown by clicking My Cart button at navigation bar</li>
-                  <li>User's profile image and his name is shown at navigation bar</li>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://assignment-10-brand-shop-b0762.web.app/'}>Live site</Link>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://github.com/asifbuet047/brand-shop-client'}>Client Code link</Link>
-                </Typography>
-                <Typography sx={{ fontSize: 14 }}>
-                  <Link href={'https://github.com/asifbuet047/brand-shop-server'}>Server Code link</Link>
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >My contribution and my public repos stats</Typography>
+            <Box className='h-fit'>
+              <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=asifbuet047&theme=cobalt" alt="Git streak" />
+            </Box>
+          </Box>
+
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >My programming language stats</Typography>
+            <Box className='h-fit'>
+              <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=asifbuet047&theme=cobalt" alt="Git streak" />
+            </Box>
+          </Box>
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >Technologies I know best</Typography>
+            <Box className='h-fit'>
+              <img src="https://skillicons.dev/icons?i=c,css,html,firebase,git,github,js,nodejs,postman,tailwind,vite,react&perline=3" alt="Git streak" />
+            </Box>
+          </Box>
+
+          <Box className='mt-2 mb-2'>
+            <Typography
+              sx={{ fontSize: '24px', paddingLeft: '5px' }}
+            >My top projects details</Typography>
+            <Divider />
+            <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2'>
+              <Card sx={{ backgroundColor: '#2a2c39', color: 'white'}}>
+                <CardContent>
+                  <Typography sx={{ fontSize: 24 }} gutterBottom>
+                    Skill Share
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <li>Anyone can teach anybody from anywhere</li>
+                    <li>One can sign in anytime and become a student</li>
+                    <li>One can register with Google</li>
+                    <li>Admin can see all useres activities</li>
+                    <li>Admin can make anyone admin</li>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://assignment-12-skill-share.web.app/'}>Live site</Link>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://github.com/asifbuet047/skill-share-client'}>Client Code link</Link>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://github.com/asifbuet047/skill-share-server'}>Server Code link</Link>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ backgroundColor: '#2a2c39', color: 'white' }}>
+                <CardContent>
+                  <Typography sx={{ fontSize: 24 }} gutterBottom>
+                    Food Sharing
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <li>Anyone in a communitu canshare his/her leftover meal</li>
+                    <li>One can sign in anytime and become a doner</li>
+                    <li>One can register with Google</li>
+                    <li>Admin can see all donation by all donars</li>
+                    <li>Any valid user can access food</li>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://assignment-11-community-foods.web.app/'}>Live site</Link>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://github.com/asifbuet047/food-sharing-client'}>Client Code link</Link>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://github.com/asifbuet047/food-sharing-server'}>Server Code link</Link>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ backgroundColor: '#2a2c39', color: 'white' }}>
+                <CardContent>
+                  <Typography sx={{ fontSize: 24 }} gutterBottom>
+                    Brand Online Shop
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <li>Our project is Tech Brand Online Shop</li>
+                    <li>This is e-commerce store where a user can buy tech products like smartphone,smartwatch,headphone etc</li>
+                    <li>User can login via mail and password also new user can create acccount</li>
+                    <li>If user already signed in Google at his browser he can login via Google</li>
+                    <li>All products ar sorted here as their brand name</li>
+                    <li>All home page user can see our current offer, our brands, our most sold product</li>
+                    <li>User can add product in cart</li>
+                    <li>All cart product can be shown by clicking My Cart button at navigation bar</li>
+                    <li>User's profile image and his name is shown at navigation bar</li>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://assignment-10-brand-shop-b0762.web.app/'}>Live site</Link>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://github.com/asifbuet047/brand-shop-client'}>Client Code link</Link>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Link href={'https://github.com/asifbuet047/brand-shop-server'}>Server Code link</Link>
+                  </Typography>
+                </CardContent>
+              </Card>
+            </div>
+          </Box>
+
 
         </div>
       </div>
+      <Footer container className='bg-[#2a2c39] rounded-lg mt-2'>
+        <Footer.Copyright href="#" by="MD ASIFUZZAMAN ASIF" year={2022} />
+        <Footer.LinkGroup>
+          <Footer.Link href="#">About</Footer.Link>
+          <Footer.Link href="#">Privacy Policy</Footer.Link>
+          <Footer.Link href="#">Licensing</Footer.Link>
+          <Footer.Link href="#">Contact</Footer.Link>
+        </Footer.LinkGroup>
+      </Footer>
     </div>
   )
 }
